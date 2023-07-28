@@ -16,7 +16,7 @@ def measureParticle():
     while (not data):
         sleep(0.1)
         data = pm_sensor.get_measurement()
-    pm25_count = data['sensor_data']['particle_count']['pm2.5']
+    pm25_count = data['sensor_data']['mass_density']['pm2.5']
     pm_sensor.stop_measurement()
     return(pm25_count)
         
